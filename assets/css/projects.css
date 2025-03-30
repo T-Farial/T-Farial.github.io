@@ -1,0 +1,153 @@
+.project-gallery {
+    padding: 2rem 0;
+    background: #121212; /* Deep dark background */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #1e1e1e; /* Slightly lighter than pure black */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255,0,0,0.2); /* Red-tinted shadow */
+    width: 350px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    height: 820px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255,0,0,0.4); /* Enhanced red shadow on hover */
+}
+
+.project-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,0,0,0.1); /* Subtle red overlay */
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.project-image:hover::before {
+    opacity: 1;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%); /* Slight desaturation */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-details {
+    padding: 1rem;
+    color: #ffffff;
+}
+
+.project-details h3 {
+    margin-bottom: 0.5rem;
+    color: #ff0000; /* Bright red for headings */
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 0.5rem;
+}
+
+.project-details p {
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.project-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #999;
+}
+
+.project-stats .icon {
+    margin-right: 0.5rem;
+    color: #ff0000;
+}
+
+.project-card .button.small {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background: #ff0000; /* Bright red */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid #ff0000;
+    position: relative;
+    overflow: hidden; /* Changed from hidden to visible */
+    
+    /* Ensure full text visibility */
+    line-height: 1.2; /* Increased line height */
+    min-height: 45px; /* Set a minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card .button.small {
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+.project-card .button.small::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.project-card .button.small:hover::before {
+    left: 0;
+}
+
+.project-card .button.small:hover {
+    background: #ff3333; /* Slightly lighter red on hover */
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(100% - 4rem);
+        max-width: 400px;
+    }
+}

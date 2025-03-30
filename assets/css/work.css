@@ -1,0 +1,70 @@
+/* Center the overall work experience section */
+.work-experience-gallery {
+    padding: 2em 0;
+    text-align: center;
+}
+
+/* Optionally, limit the content width */
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Company Card */
+.company {
+    background-color: #000;      /* Black background */
+    padding: 1em;
+    margin: 0 auto 2em;          /* Center card and add bottom spacing */
+    border-radius: 4px;
+    max-width: 800px;
+    color: #fff;                 /* White text */
+    text-align: left;            /* Align content inside the card to the left */
+}
+
+.company h2 {
+    margin-bottom: 0.5em;
+    color: #ff0000;              /* Red heading */
+}
+
+.company p {
+    color: #fff;
+}
+
+/* Timeline Styles */
+.timeline {
+    border-left: 3px solid #ff474c;    /* Red vertical line */
+    margin: 2em 0;
+    padding-left: 2em;
+    text-align: left;                  /* Keep timeline details left aligned */
+}
+
+.timeline-entry {
+    margin-bottom: 2em;
+}
+
+.timeline-entry h3 {
+    margin: 0 0 0.5em;
+    color: #ff7f7f;              /* Red role title */
+}
+
+.timeline-entry .period {
+    font-style: italic;
+    color: #fff;                 /* White text for dates */
+    margin-bottom: 0.5em;
+}
+
+/* Details & Summary for Collapsible Sections */
+details {
+    background-color: #000;
+    border: 1px solid #ff0000;
+    border-radius: 4px;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff7f7f;
+}
